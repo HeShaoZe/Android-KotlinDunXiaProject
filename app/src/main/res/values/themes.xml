@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- 启动页主题 -->
+    <style name="Theme.DunXiaWeather.Starting" parent="Theme.SplashScreen">
+        <!-- 启动页背景颜色 -->
+        <item name="windowSplashScreenBackground">#FFFFFF</item>
+        <!-- 启动页图标 -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/dun_xia_launch</item>
+        <!-- 启动页结束后切换到的主题 -->
+        <item name="postSplashScreenTheme">@style/Theme.DunXiaWeather</item>
+    </style>
+
+    <!-- 应用正常主题 -->
+    <style name="Theme.DunXiaWeather" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#2196F3</item>
+    </style>
+</resources>

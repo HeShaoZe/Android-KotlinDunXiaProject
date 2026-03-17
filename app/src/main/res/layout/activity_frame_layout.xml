@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Layout.FrameLayoutActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        >
+
+        <Button
+            android:id="@+id/frame_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            tools:ignore="MissingConstraints"
+            ></Button>
+
+        <!-- 1. 底层：图片 (先写，所以在下面) -->
+        <ImageView
+            android:id="@+id/bgImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_person_24dp"
+            android:scaleType="centerCrop"/>
+
+        <!-- 2. 顶层：半透明遮罩 (后写，覆盖在图片上) -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"/> <!-- 50% 黑色透明 -->
+
+        <!-- 3. 最顶层：文字 (最后写，在最上面) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="这是一个水印"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:layout_gravity="center" /> <!-- 居中显示 -->
+
+        <!-- 4. 右下角按钮 -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="编辑"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"/>
+
+    </FrameLayout>
+
+  </FrameLayout>

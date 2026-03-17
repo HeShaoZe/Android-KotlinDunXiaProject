@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context="PlayMedia.PlayMediaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <Button
+            android:id="@+id/paly_page_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            tools:ignore="MissingConstraints"
+            ></Button>
+    </LinearLayout>
+
+
+    <!-- 核心播放器视图 -->
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/playerView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal"
+        >
+        <Button
+            android:id="@+id/start_paly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始播放"
+            tools:ignore="MissingConstraints"
+            ></Button>
+        <Button
+            android:id="@+id/stop_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="停止播放"
+            tools:ignore="MissingConstraints"
+            ></Button>
+        <Button
+            android:id="@+id/replay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重新开始"
+            tools:ignore="MissingConstraints"
+            ></Button>
+
+    </LinearLayout>
+
+</LinearLayout>
